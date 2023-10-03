@@ -9,11 +9,8 @@ interface BtnDeleteInvoiceProps {
 }
 
 const BtnDeleteInvoice: React.FC<BtnDeleteInvoiceProps> = ({ id, del }) => {
-  const date = new Date();
-  // const formatDate = format(date, "dd/MM/yyyy");
+  const { month, year } = useSelector((state: any) => state.date.date);
   const header = useSelector((state: any) => state.header);
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
 
   const deleteInvoice = () => {
     axios

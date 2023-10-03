@@ -34,13 +34,6 @@ const BtnAddBook: React.FC<BtnAddBookProps> = ({ id, name }) => {
     }
   };
 
-  //   const listBook = () => {
-  //     axios
-  //       .get(import.meta.env.VITE_URL_BOOK + `/book/all`, header)
-  //       .then((res) => {
-  //         console.log(res.data);
-  //       });
-  //   };
   return (
     <>
       <button className="btn btn-success" onClick={() => openModal()}>

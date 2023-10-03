@@ -7,6 +7,7 @@ import BtnAddInvoice from "../components/BtnAddInvoice";
 import BtnDeleteInvoiceStudent from "../components/BtnDeleteInvoiceStudent";
 import BtnAddBook from "../components/BtnAddBook";
 import { Link } from "react-router-dom";
+import BtnAddition from "../components/BtnAddition";
 
 const ListStudentByParent: React.FC = () => {
   const [isLoading, setLoading] = useState(true);
@@ -103,9 +104,7 @@ const ListStudentByParent: React.FC = () => {
                   {isDisabled(item._id) ? (
                     <>
                       <BtnAddBook id={item._id} name={item.name} />
-                      <button className="btn btn-sm btn-secondary">
-                        <i className="bi bi-plus-lg"></i>
-                      </button>
+                      <BtnAddition id={item._id} name={item.name} />
                       <BtnDeleteInvoiceStudent id={item._id} del={delSuccess} />
                     </>
                   ) : (
