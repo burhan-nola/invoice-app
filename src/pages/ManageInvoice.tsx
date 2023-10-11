@@ -7,6 +7,7 @@ import BtnGenerateInvoice from "../components/BtnGenerateInvoice";
 import BtnManageInvoice from "../components/BtnManageInvoice";
 import BtnDeleteInvoice from "../components/BtnDeleteInvoice";
 import BtnPrintInvoice from "../components/BtnPrintInvoice";
+import BtnManage from "../component/BtnManage";
 
 const ManageInvoice: React.FC = () => {
   const [isLoading, setLoading] = useState(true);
@@ -91,6 +92,14 @@ const ManageInvoice: React.FC = () => {
                       mother={item.mother.name}
                     />{" "}
                     <BtnGenerateInvoice id={item._id} gen={genSuccess} />
+                    <BtnManage
+                      id={item._id}
+                      to={"/manage/students"}
+                      action="show"
+                      styBtn="btn btn-primary"
+                      styTxt="bi bi-file-earmark-medical"
+                      txt="Manage"
+                    />
                   </>
                 )}
               </td>

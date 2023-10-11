@@ -2,11 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const date = new Date();
 // const formatDate = format(date, "dd/MM/yyyy");
+const day = date.getDay();
 const month = date.getMonth() + 1;
 const year = date.getFullYear();
 
 const initialState = {
   date: {
+    day: day,
     month: month,
     year: year,
   },
