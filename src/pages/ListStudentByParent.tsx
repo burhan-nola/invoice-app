@@ -8,6 +8,7 @@ import BtnDeleteInvoiceStudent from "../components/BtnDeleteInvoiceStudent";
 import BtnAddBook from "../components/BtnAddBook";
 import { Link } from "react-router-dom";
 import BtnAddition from "../components/BtnAddition";
+import DetailInvoiceStudent from "../components/DetailInvoiceStudent";
 
 const ListStudentByParent: React.FC = () => {
   const [isLoading, setLoading] = useState(true);
@@ -117,6 +118,8 @@ const ListStudentByParent: React.FC = () => {
         </table>
         <Link to="/manage">{"<-"}Back</Link>
       </div>
+      <hr />
+      <DetailInvoiceStudent inv={inv} data={data} />
     </>
   );
 };
